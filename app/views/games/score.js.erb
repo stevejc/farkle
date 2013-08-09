@@ -9,7 +9,7 @@ $('#score_it').after('<div id="show_scores"><div class="player_summary"><div cla
 $('#roll').after ('<div id="scoring_summary"><%= session[:booked_points][session[:player]] %>+ <%= session[:tentative_points] %>= <%= session[:booked_points][session[:player]] + session[:tentative_points] %></div>')
 <% else %>
 
-$('h2').after('<p>You win ............</p>');
+$('h2').after('<p>Player <%= session[:player] + 1 %> is the winner !!!!!!!</p>');
 $('#roll').after('<%=link_to "Play Again", new_game_path, class: "btn" %>');
 $('#roll').remove();
 $('#score_it').remove();
