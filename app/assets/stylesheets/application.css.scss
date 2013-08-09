@@ -1,0 +1,143 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.roll_results {
+  padding: 10px;
+	height: 200px;
+	width: 250px;
+	border: 2px solid brown;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	
+	p {
+		margin-bottom : 0px;
+	}
+	
+	hr {
+	margin: 5px 0px;
+	}
+
+}
+
+#scoring_summary {
+	font-size: 10px;
+	display: inline-block;
+	padding: 10px;
+}
+
+.player_summary {
+display: inline-block;
+
+}
+
+/* CSS Dice: An Experiment by Jonathan Sampson - @jonathansampson */
+.die.one .dot { 
+	box-shadow: 0 .2em 0 #FFF 
+}
+.die.two .dot { 
+	background: transparent;
+	box-shadow: -2.3em -2.3em 0 #345, 
+		     2.3em  2.3em 0 #345, 
+		    -2.3em -2.3em 0 #FFF, 
+		     2.3em  2.4em 0 #FFF 
+}
+.die.three .dot { 
+	box-shadow: -2.3em -2.3em 0 #345, 
+		     2.3em  2.3em 0 #345, 
+		    -2.3em -2.3em 0 #FFF, 
+		     2.3em  2.4em 0 #FFF, 
+		         0   .2em 0 #FFF 
+}
+.die.four .dot { 
+	background: transparent;
+        box-shadow: -2.3em -2.3em 0 #345, 
+        	     2.3em  2.3em 0 #345, 
+        	    -2.3em  2.3em 0 #345, 
+        	     2.3em -2.3em 0 #345, 
+        	    -2.3em -2.3em 0 #FFF, 
+        	     2.3em  2.4em 0 #FFF, 
+        	    -2.3em  2.4em 0 #FFF, 
+        	     2.3em -2.3em 0 #FFF 
+}
+.die.five .dot { 
+	box-shadow: -2.3em -2.3em 0 #345, 
+		     2.3em  2.3em 0 #345, 
+		    -2.3em  2.3em 0 #345, 
+		     2.3em -2.3em 0 #345, 
+		    -2.3em -2.2em 0 #FFF, 
+		     2.3em -2.2em 0 #FFF, 
+		     2.3em  2.4em 0 #FFF, 
+		    -2.3em  2.4em 0 #FFF,
+		         0   .2em 0 #FFF 
+}
+.die.six .dot {
+	background: transparent;
+	box-shadow: -2.3em -2.3em 0 #345,
+		    -2.3em      0 0 #345,
+		    -2.3em  2.3em 0 #345,
+		     2.3em -2.3em 0 #345,
+		     2.3em      0 0 #345,
+		     2.3em  2.3em 0 #345,
+		    -2.3em -2.1em 0 #FFF,
+		    -2.3em   .2em 0 #FFF,
+		    -2.3em  2.4em 0 #FFF,
+		     2.3em  2.4em 0 #FFF,
+		     2.3em   .2em 0 #FFF,
+		     2.3em -2.1em 0 #FFF
+}
+.die {
+	border-top: 1px solid #f1f1f1;
+	width: 25px; height: 25px;
+	border-radius: 5px;
+	position: relative;
+	margin: 5px;
+	font-size: 3px;
+	display: inline-block;
+	box-shadow: 0px 2.5px 0 #CCC, 0 3px 1.5px #444, 0 5px 2.5px #999;
+	background-image: linear-gradient(top, #fefefe, #f1f1f1 80%)
+}
+.dot {
+	width: 20%; 
+	height: 20%; 
+	left: 50%; 
+	top: 50%;
+	margin: -10%;
+	background: #345;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+}
+
+.player_score {
+	display: inline-block;
+}
+
+.your_score {
+	margin-bottom: 0px;
+}
+
+.hide_it {
+	visibility: hidden;
+}
+
+.dice_seperator{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 10px;
+	color: brown;
+}
+
+.right {
+padding-left: 60px;
+}

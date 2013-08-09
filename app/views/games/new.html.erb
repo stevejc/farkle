@@ -1,0 +1,29 @@
+<h2> Farkle - 5,000 </h2>
+
+<div class="roll_results"></div>
+<%=link_to "Roll", roll_path, class: "btn", id: "roll", remote: true %>
+<div id="scoring_summary">
+<%= session[:booked_points][session[:player]] %>
++ <%= session[:tentative_points] %>
+= <%= session[:booked_points][session[:player]] + session[:tentative_points] %>
+</div>
+<%=link_to "Score It", score_path, class: "btn", id: "score_it", remote: true %>
+<div id="show_scores">
+  <div class="player_summary">
+    <div class="die one <%= show_die(0,session[:player]) %>">  <span class="dot"></span></div>
+
+    <div class="player_score">
+      <p class="your_score">Player 1:</p>
+      <p class="booked_score"><%= session[:booked_points][0] %><p>
+    </div>
+  </div>
+  <div class="player_summary right">
+    <div class="die two <%= show_die(1,session[:player]) %>">  <span class="dot"></span></div>
+    <div class="player_score">
+      <p class="your_score">Player 2:</p>
+      <p class="booked_score"><%= session[:booked_points][1] %><p>
+    </div>
+  </div>
+</div>
+
+

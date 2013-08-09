@@ -1,0 +1,23 @@
+$('#booked_score').remove();
+$('.roll_results').remove();
+$('#show_scores').remove();
+$('#scoring_summary').remove();
+
+<% if session[:winner] == 0 %>
+$('h2').after('<div class="roll_results"></div>')
+$('#score_it').after('<div id="show_scores"><div class="player_summary"><div class="die one <%= show_die(0,session[:player]) %>"><span class="dot"></span></div><div class="player_score"><p class="your_score">Player 1:</p><p class="booked_score"><%= session[:booked_points][0] %></p></div><br></div><div class="player_summary right"><div class="die two <%= show_die(1,session[:player]) %>"><span class="dot"></span></div><div class="player_score"><p class="your_score">Player 2:</p><p class="booked_score"><%= session[:booked_points][1] %></p></div></div>');
+$('#roll').after ('<div id="scoring_summary"><%= session[:booked_points][session[:player]] %>+ <%= session[:tentative_points] %>= <%= session[:booked_points][session[:player]] + session[:tentative_points] %></div>')
+<% else %>
+
+$('h2').after('<p>You win ............</p>');
+$('#roll').after('<%=link_to "Play Again", new_game_path, class: "btn" %>');
+$('#roll').remove();
+$('#score_it').remove();
+
+
+
+<% end %>
+
+
+
+

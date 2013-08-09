@@ -1,0 +1,11 @@
+<h2>Roll</h2>
+<div class="roll_results">
+<% @dice.each do |dice| %>
+<%= add_dice(dice) %>
+<% end %>
+<p>You rolled <%=  @dice.join(", ") %>.</p>
+<p>You score <%= @score %> points.</p>
+<p>Your remaining dice are <%= @remaining_dice.join(", ") %>.</p>
+<p>Your scoring dice are:<%= display_played_dice(session[:scoring_dice]) %> </p>
+</div>
+<%=link_to "Roll", roll_path, class: "btn", id: "roll" %>

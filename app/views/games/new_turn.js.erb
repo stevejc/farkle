@@ -1,0 +1,4 @@
+$('#booked_score').remove();
+$('.roll_results').remove();
+$('h2').after('<div class="roll_results"></div>')
+$('#your_score').after('<p id="booked_score"><%= session[:booked_points] %></p>');

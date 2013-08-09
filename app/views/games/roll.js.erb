@@ -1,0 +1,14 @@
+$('.roll_results').remove();
+$('#scoring_summary').remove();
+$('#show_scores').remove();
+$('h2').after('<div class="roll_results"><p>Your roll:</p><% if @score_this_roll == 0 %>Farkle!<% else %><% @dice.each do |d| %><%= add_dice(d) %><% end %><% end %><hr><p>Remaining dice:</p><p><% @remaining_dice.each do |r| %><%= add_dice(r) %><% end %></p><hr><p>Scoring dice:</p><p><% session[:scoring_dice].each do |roll| %><% roll.each do |r| %><%= add_dice(r) %><% end %><div class="dice_seperator">|</div><% end %></p></div>');
+
+
+
+
+$('#roll').after ('<div id="scoring_summary"><%= session[:booked_points][session[:player]] %>+ <%= session[:tentative_points] %>= <%= session[:booked_points][session[:player]] + session[:tentative_points] %></div>');
+
+$('#score_it').after('<div id="show_scores"><div class="player_summary"><div class="die one <%= show_die(0,session[:player]) %>"><span class="dot"></span></div><div class="player_score"><p class="your_score">Player 1:</p><p class="booked_score"><%= session[:booked_points][0] %></p></div><br></div><div class="player_summary right"><div class="die two <%= show_die(1,session[:player]) %>"><span class="dot"></span></div><div class="player_score"><p class="your_score">Player 2:</p><p class="booked_score"><%= session[:booked_points][1] %></p></div></div>');
+
+
+
